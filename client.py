@@ -42,4 +42,5 @@ try:
     pm.start()
     embed()
 finally:
+    pm.stop()
     client.disconnect()
