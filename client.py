@@ -90,9 +90,11 @@ class mywindow(QtWidgets.QMainWindow):
            self.ui.lineEdit_4.hasAcceptableInput()):
             for param in self.sensorsAndServer[1].get_variables():
                 if(param.get_description().to_string() == "Velocity"):
-                    param.set_value(self.ui.lineEdit.text())
+                    param.set_value(
+                        float(self.ui.lineEdit.text().replace(',', '.')))
                 elif(param.get_description().to_string() == "Force"):
-                    param.set_value(self.ui.lineEdit_4.text())
+                    param.set_value(
+                        float(self.ui.lineEdit_4.text().replace(',', '.')))
             self.ui.statusbar.showMessage("Параметры установлены")
         else:
             self.ui.statusbar.showMessage(
@@ -104,9 +106,11 @@ class mywindow(QtWidgets.QMainWindow):
            self.ui.lineEdit_5.hasAcceptableInput()):
             for param in self.sensorsAndServer[2].get_variables():
                 if(param.get_description().to_string() == "Velocity"):
-                    param.set_value(self.ui.lineEdit_2.text())
+                    param.set_value(
+                        float(self.ui.lineEdit_2.text().replace(',', '.')))
                 elif(param.get_description().to_string() == "Force"):
-                    param.set_value(self.ui.lineEdit_5.text())
+                    param.set_value(
+                        float(self.ui.lineEdit_5.text().replace(',', '.')))
             self.ui.statusbar.showMessage("Параметры установлены")
         else:
             self.ui.statusbar.showMessage(
@@ -118,9 +122,11 @@ class mywindow(QtWidgets.QMainWindow):
            self.ui.lineEdit_6.hasAcceptableInput()):
             for param in self.sensorsAndServer[3].get_variables():
                 if(param.get_description().to_string() == "Velocity"):
-                    param.set_value(self.ui.lineEdit_3.text())
+                    param.set_value(
+                        float(self.ui.lineEdit_3.text().replace(',', '.')))
                 elif(param.get_description().to_string() == "Force"):
-                    param.set_value(self.ui.lineEdit_6.text())
+                    param.set_value(
+                        float(self.ui.lineEdit_6.text().replace(',', '.')))
             self.ui.statusbar.showMessage("Параметры установлены")
         else:
             self.ui.statusbar.showMessage(
